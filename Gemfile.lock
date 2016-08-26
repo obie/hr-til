@@ -120,6 +120,7 @@ GEM
       nokogiri (~> 1.5)
       railties (>= 3, < 5)
     cucumber-wire (0.0.1)
+    dalli (2.7.6)
     database_cleaner (1.5.1)
     diff-lcs (1.2.5)
     docile (1.1.5)
@@ -190,6 +191,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    memcachier (0.0.2)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
     method_source (0.8.2)
@@ -239,6 +241,8 @@ GEM
     rack-cors (0.4.0)
     rack-test (0.6.3)
       rack (>= 1.0)
+    rack-throttle (0.4.0)
+      rack (>= 1.0.0)
     rails (4.2.6)
       actionmailer (= 4.2.6)
       actionpack (= 4.2.6)
@@ -364,6 +368,7 @@ DEPENDENCIES
   bullet
   coffee-rails (~> 4.1.0)
   cucumber-rails
+  dalli
   database_cleaner
   dynamic_form
   factory_girl_rails
@@ -374,12 +379,14 @@ DEPENDENCIES
   jquery-rails
   kaminari
   launchy
+  memcachier
   omniauth-google-oauth2
   pg
   phil
   pry-rails
   puma
   rack-cors
+  rack-throttle
   rails (= 4.2.6)
   rails_12factor
   redcarpet
