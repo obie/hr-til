@@ -13,9 +13,9 @@
     = yield :head
     %meta(name="twitter:card" content="summary_large_image")
     %meta(name="twitter:site" content="@hashrockettil")
-    %meta(name="twitter:creator" content="@hashrockettil")
+    %meta(name="twitter:creator" content="@obie")
     %meta(name="twitter:title" content="Today I Learned: a Hashrocket Project")
-    %meta(name="twitter:description" content="TIL is an open-source project by Hashrocket that exists to catalogue the sharing & accumulation of knowledge as it happens day-to-day. Posts have a 200-word limit, and posting is open to any Rocketeer as well as select friends of the team. We hope you enjoy learning along with us.")
+    %meta(name="twitter:description" content="TIL is an open-source project by Hashrocket that exists to catalogue the sharing & accumulation of knowledge as it happens day-to-day.")
     %meta(name="twitter:image" content="https://til.hashrocket.com/assets/til_twittercard.png")
 
     = yield :canonical
@@ -33,7 +33,10 @@
     %header.site_head
       %div
         %h1= link_to SITE_NAME, root_path
-        %h2= link_to "by Obie Fernandez", "https://obiefernandez.com"
+        %h2
+          = link_to "by Obie Fernandez", "https://obiefernandez.com", target: "_blank"
+          of
+          = link_to "Kickass Consulting", "http://kickass-consulting.com", target: "_blank"
 
     = render 'shared/flash'
 
@@ -49,12 +52,9 @@
                 TIL is an open-source project by
                 [Hashrocket](https://hashrocket.com) that exists to catalogue
                 the sharing & accumulation of knowledge as it happens
-                day-to-day. Posts have a 200-word limit, and posting is open to
-                any Rocketeer as well as selected friends of Hashrocket. We
-                hope you enjoy learning along with us.
+                day-to-day. I hope you enjoy learning with me.
               %ul.social
                 %li= link_to "/hashrockettil", "https://twitter.com/hashrockettil", class: "social_twitter"
-                %li= link_to "/hashrocket/hr-til", "https://github.com/hashrocket/hr-til", class: "social_github"
 
         %li.site_nav__statistics
           = link_to "statistics", statistics_path, class: "site_nav__link"
